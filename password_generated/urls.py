@@ -16,9 +16,10 @@ Including another URLconf
 """
 #from django.contrib import admin
 from django.urls import path
-from generator.views import generated_clue_api
+from generator import views
+
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
-    path('generator-password/',generated_clue_api,name='generator_password')
+    path('password/',views.GeneratePasswordView,name='password'),
 ]

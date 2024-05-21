@@ -2,26 +2,23 @@ import React, { useState } from "react";
 import axios from "axios";
 
 function Generator() {
-  const [password, setPassword] = useState("");
-  const [generated, setGenerated] = useState(false); // State for the button
+  const [password,setPassword]=useState('');
 
-  const generarContrasena = async () => {
-    setGenerated(true); // Indicate that it is generating
-    const response = await axios.get("/api/generator-password/");
-    setPassword(response.data.contrasena);
-    setGenerated(false); // Generation finished
-  };
-
+  const generatePassword=async()=>{
+    try{
+      const response = await axios.get('http://localhost:8000/password/');
+      const generatePassword = response.data.password;
+      setPassword(generatePassword);
+    } catch (error){
+      console.error(error);
+    }
+  }
   return (
     <div>
-      <h1>Password Generator</h1>
-      <p>Your password:</p>
-      <span>{password}</span>
-      <button disabled={generated} onClick={generarContrasena}>
-        Password generated
-      </button>
+      <button onClick={generatePassword}>Generar contraseña</button>
+      <p>Contraseña generada: {password}</p>
     </div>
-  );
+  )
 }
 
-export default Generator
+export default Generator;
