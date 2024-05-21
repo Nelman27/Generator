@@ -3,6 +3,7 @@
 2) Levantar el localhost 5173 de Vite + React npm run dev 
 
 * Objetivos del proyecto:
--Crear backend y fronted ✓
--Estilisar con tailwindcss.
--Crear un botón que copie la contraseña generada al lado de la clave mostrada.
+- Crear backend y frontend ✓
+- Funcionar en gitpages o otro server la website con el backend and frontend.
+- Estilisar con tailwindcss.
+- Crear un botón que copie la contraseña generada al lado de la clave mostrada.
