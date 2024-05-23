@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.generator-container {
+  background-color: rgba(0, 0, 0, 0.6); /* Color de fondo semitransparente */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+  border-radius: 16px; /* Bordes redondeados */
+  padding: 3rem; /* Espaciado interno */
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease; /* Transición suave */
+}
+
+.generator-container:hover {
+  transform: translateY(-5px); /* Levantar ligeramente en hover */
+  background-color: rgba(0, 0, 0, 0.8); /* Cambiar el color de fondo en hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada en hover */
+}
+
+.background-site {
+  background-color: #f3f4f6; /* Color de fondo sólido */
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/carbon_fibre.png"); /* URL de la textura */
+  background-repeat: repeat; /* Repetir la textura en el fondo */
+}
